@@ -1,0 +1,18 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+/* this will make the universal selector more reliable */
+
+html {
+  /* font-size: 10px; this will only make the root 1rem = 10px  and not zoom in the web page */
+  font-size: 62.5%;
+  /* this 100% = 16px = 1rem =====  i.e 62.5% = 10px = 1rem */
+  /* this will also zoom in the page  */
+}
+body {
+  box-sizing: border-box;
+}

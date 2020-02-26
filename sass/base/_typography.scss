@@ -1,0 +1,43 @@
+body {
+  font-family: 'lato', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: $color-grey-dark;
+  padding: 2rem;
+}
+
+.heading-primary {
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+  backface-visibility: hidden;
+  &--main {
+    display: block;
+    font-weight: 700;
+    font-size: 4.6rem;
+    letter-spacing: 2rem;
+    line-height: 7rem;
+    animation: moveInleft 4s ease-out;
+  }
+  &--sub {
+    display: block;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 1.2rem;
+    animation: moveInRight 4s ease-out;
+  }
+}
+.heading-secondary {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3.2rem;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary, 0.8),
+    rgba($color-primary-light, 0.8)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

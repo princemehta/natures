@@ -1,0 +1,21 @@
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'components/button';
+
+@import 'layout/header';
+// grid form bootstrap 4
+// Required
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+// optional features to add in your project
+@import 'node_modules/bootstrap/scss/grid';
+
+@import 'pages/home';
