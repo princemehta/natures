@@ -1,0 +1,104 @@
+.card {
+  perspective: 100rem;
+  height: 40rem;
+  position: relative;
+  &__side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 40rem;
+    color: $color-white;
+    transition: all 0.8s;
+    border-radius: 4px;
+    overflow: hidden;
+    &--front {
+      background-color: rgba(255,255,255,1.0);
+    }
+    &--back {
+      
+      transform: rotateY(180deg);
+      &-1{
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary,
+          $color-primary-light
+        )
+      }
+    }
+  }
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+  &__picture {
+    height: 18rem;
+    background-size: cover;
+    background-position: top;
+    background-blend-mode: multiply;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary,
+          $color-primary-light
+        ),
+        url(../img/nat-5.jpg);
+    }
+  }
+  &__heading {
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    font-weight: 300;
+    font-size: 1.8rem;
+    width: 60%;
+    line-height: 4.5rem;
+    text-align: right;
+  }
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break:clone;
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-primary,
+        $color-primary-light
+      );
+    }
+  }
+  &__detail{
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      padding: 3rem;
+     li {
+       text-align: center;
+       font-size: 1.4rem;
+       color: $color-black;
+       &:not(:last-child){
+         padding: 1rem;
+         border-bottom: 1px solid $color-primary-light;
+       }
+       &:first-child{
+         margin-top: 1rem;
+       }
+      }
+    }
+  }
+  //back side part
+  &__cta{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 60%;
+    text-align: center;
+  }
+}

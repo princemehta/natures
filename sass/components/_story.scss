@@ -1,0 +1,51 @@
+.story {
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: 0 1rem 4rem rgba($color-black, 0.8);
+  border-radius: 5px;
+  background-color: rgba($color-white,.1);
+  padding: 5rem;
+  padding-left: 8rem;
+  transform:skewX(-12deg);
+  & > * {
+    transform: skewX(12deg);
+  }
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: skewX(12deg) translateX(-3rem);
+    border: none;
+  }
+  &__image{
+    height: 100%;
+    transform: translateX(-3rem) scale(1.4);
+    overflow: hidden;
+    transition: all .3s;
+  }
+  &__text{
+    transform: skew(12deg);
+  }
+  &__caption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 30%);
+    color: $color-white;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    backface-visibility: hidden;
+    transition: all .3s;
+  }
+  &:hover &__caption{
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  &:hover &__image{
+    transform: translateX(-3rem) scale(1);
+    filter: brightness(50%);
+  }
+}

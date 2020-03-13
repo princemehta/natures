@@ -8,14 +8,20 @@
 @import 'base/utilities';
 
 @import 'components/button';
+@import 'components/composition';
+@import 'components/feature-box';
+@import 'components/card';
+@import 'components/story';
+@import 'components/bg-video';
 
 @import 'layout/header';
+@import 'layout/grid';
 // grid form bootstrap 4
 // Required
-@import 'node_modules/bootstrap/scss/functions';
-@import 'node_modules/bootstrap/scss/variables';
-@import 'node_modules/bootstrap/scss/mixins';
+// @import 'node_modules/bootstrap/scss/functions';
+// @import 'node_modules/bootstrap/scss/variables';
+// @import 'node_modules/bootstrap/scss/mixins';
 // optional features to add in your project
-@import 'node_modules/bootstrap/scss/grid';
+// @import 'node_modules/bootstrap/scss/grid';
 
 @import 'pages/home';
