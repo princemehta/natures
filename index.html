@@ -16,6 +16,30 @@
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
+    <div class="navigation">
+      <input type="checkbox" id="navi" class="navigation__checkbox" />
+      <label for="navi" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span class="navigation__span">01</span> hello</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span class="navigation__span">01</span> prince</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span class="navigation__span">01</span> sanju</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span class="navigation__span">01</span> sandeep</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span class="navigation__span">01</span> mehta</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <div class="header">
       <div class="header__logo-box">
         <img src="img/logo-white.png" alt="logo" class="header__logo" />
@@ -222,7 +246,97 @@
       </section>
       <section class="section-book">
         <div class="book">
-          
+          <div class="book__left">
+            <div class="u-center-text u-margin-bottom-2">
+              <h2 class="heading-secondary">
+                start Your Trip
+              </h2>
+            </div>
+            <form action="#" class="form">
+              <div class="form__group">
+                <input
+                  type="text"
+                  class="form__input"
+                  id="name"
+                  placeholder="First Name"
+                  required
+                />
+                <label for="name" class="form__label">First Name</label>
+              </div>
+              <div class="form__group">
+                <input
+                  type="email"
+                  class="form__input"
+                  id="email"
+                  placeholder="Email"
+                  required
+                />
+                <label for="email" class="form__label">Email</label>
+              </div>
+              <div class="form__radio-group">
+                <input
+                  type="radio"
+                  class="form__radio-input"
+                  name="size"
+                  id="small"
+                />
+                <label for="small" class="form__radio-label">
+                  <span class="form__radio-button"></span>
+                  Prince
+                </label>
+              </div>
+              <div class="form__radio-group">
+                <input
+                  type="radio"
+                  class="form__radio-input"
+                  name="size"
+                  id="large"
+                />
+                <label for="large" class="form__radio-label"
+                  ><span class="form__radio-button"></span>
+                  large
+                </label>
+              </div>
+              <div class="u-margin-top-2">
+                <button class="btn btn--green">Book &rarr;</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="section-footer">
+        <div class="footer__logo-box">
+          <img src="img/logo-green-2x.png" alt="logo" class="footer__logo" />
+        </div>
+        <div class="row">
+          <div class="col-1-of-2">
+            <div class="footer__navigation">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#" class="footer__link">courier</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">courier</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">courier</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">courier</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-1-of-2">
+            <p class="footer__copyright">
+              <a href="#" class="footer__link">prince</a> sit amet consectetur
+              adipisicing elit. Deleniti dolores iure sit quo fugit error fuga
+              cumque doloremque, aliquid
+              <a href="#" class="footer__link">prince</a> distinctio optio
+              &copy; 2019 Labore incidunt aperiam saepe ullam quod laborum
+              facilis
+            </p>
+          </div>
         </div>
       </section>
     </main>

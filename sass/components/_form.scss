@@ -1,0 +1,82 @@
+.form {
+  &__group {
+    margin-bottom: 4rem;
+    position: relative;
+  }
+  &__input {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-bottom: 3px solid orangered;
+    border-radius: 3px;
+    transition: all 0.2s;
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+    }
+    &:valid {
+      border-bottom: 3px solid green;
+    }
+  }
+  &__label {
+    color: $color-secondary;
+    position: absolute;
+    top: 4rem;
+    left: 0.5rem;
+    transition: all 0.2s;
+    opacity: 1;
+    transition: all 0.2s;
+  }
+
+  //  &__input:placeholder-shown  &__label { } will not work because they arn't nested. input is not the parent of the label.
+  &__input:placeholder-shown + &__label {
+    // we can use general sibling selector (~) as well istead of direct sibling selector (+).
+    transform: translateY(-4rem);
+    opacity: 0;
+  }
+  &__radio-group {
+    width: 45%;
+    display: inline-block;
+  }
+  &__radio-input{
+    display: none;
+  }
+
+  &__radio-label {
+    font-size: 2rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 3rem;
+    color: $color-primary;
+  }
+  &__radio-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 5px solid $color-primary;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0rem;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0rem;
+      height: 0rem;
+      border-radius: 50%;
+      background-color: $color-primary;
+      opacity: 0;
+      transition: all .3s;
+    }
+  }
+
+  &__radio-input:checked + &__radio-label &__radio-button::after {
+    opacity: 1;
+    width: 1rem;
+    height: 1rem;
+  }
+}
